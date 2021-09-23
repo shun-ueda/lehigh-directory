@@ -1,7 +1,7 @@
 name: Build README
 on:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 23 * * *'
   push:
     branches:
       - main
@@ -14,10 +14,10 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: 16.9.1
       - run: |-
           yarn
-      - name: Update README
+      - name: Update user directory
         run: |-
           yarn start
       - name: Get current time
@@ -25,7 +25,7 @@ jobs:
         id: current-time
         with:
           format: YYYYMMDD-HH
-          utcOffset: "+09:00"
+          utcOffset: "-04:00"
       - name: Commit and push if changed
         run: |-
           git diff
