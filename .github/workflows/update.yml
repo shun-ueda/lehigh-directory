@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 16
       - run: |-
-          yarn ci
+          yarn
       - name: Update README
         run: |-
           yarn start
