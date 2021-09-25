@@ -1,4 +1,4 @@
-name: Build README
+name: Update database
 on:
   schedule:
     - cron: '0 23 * * *'
