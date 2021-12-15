@@ -1,7 +1,6 @@
 import fetch from 'node-fetch'
 import cheerio from 'cheerio'
 import database from 'better-sqlite3'
-import cliProgress from 'cli-progress'
 
 const alphabet = Array.from(Array(26)).map((e, i) => i + 97).map(x => String.fromCharCode(x));
 const pattern = ['x']
@@ -12,8 +11,6 @@ alphabet.forEach(a => {
 })
 const db = database('assets/directory.db');
 const stmt = db.prepare('INSERT INTO directory (first_name, last_name, description, email_address, phone_number, title, campus_address) VALUES (?, ?, ?, ?, ?, ?, ?)')
-const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
-bar.start(pattern.length, 0)
 
 let cnt = 0
 setInterval(() => {
@@ -46,10 +43,8 @@ setInterval(() => {
                 } catch (e) {}
             }
             cnt++
-            bar.increment()
             if (cnt === pattern.length) {
                 db.close()
-                bar.stop()
                 process.exit(0)
             }
         })
