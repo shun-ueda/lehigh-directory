@@ -1,23 +1,20 @@
 {
   "name": "lehigh-directory",
   "version": "1.0.0",
-  "type": "module",
   "main": "src/index.js",
   "repository": "https://github.com/shun-ueda/lehigh-directory.git",
   "author": "Shun Ueda <62182668+shun-ueda@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
-    "better-sqlite3": "^7.4.3",
-    "cheerio": "^1.0.0-rc.10",
-    "node-fetch": "^3.0.0",
-    "puppeteer": "^11.0.0"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@types/better-sqlite3": "^7.4.0",
     "@types/node": "^16.9.6",
-    "@types/puppeteer": "^5.4.4"
+    "esbuild": "^0.14.31",
+    "esbuild-runner": "^2.2.1"
   },
   "scripts": {
-    "start": "node --no-warnings src/index.js"
-  }
+    "start": "esr hello-world.ts"
+  },
+  "packageManager": "yarn@3.2.0"
 }
