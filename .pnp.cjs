@@ -36,7 +36,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.11.26"],\
             ["esbuild", "npm:0.14.31"],\
             ["esbuild-runner", "virtual:43b9e8954d98e08321e015ada0d548e1d3cac3b2f3f57792e24432386161bcdbae9531ad8faa4c522c1b809ea80b23f5571442a9d93182ee7ffcd770bc0fd8a7#npm:2.2.1"],\
-            ["lodash", "npm:4.17.21"]\
+            ["lodash", "npm:4.17.21"],\
+            ["prettier", "npm:2.6.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -300,7 +301,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.11.26"],\
             ["esbuild", "npm:0.14.31"],\
             ["esbuild-runner", "virtual:43b9e8954d98e08321e015ada0d548e1d3cac3b2f3f57792e24432386161bcdbae9531ad8faa4c522c1b809ea80b23f5571442a9d93182ee7ffcd770bc0fd8a7#npm:2.2.1"],\
-            ["lodash", "npm:4.17.21"]\
+            ["lodash", "npm:4.17.21"],\
+            ["prettier", "npm:2.6.2"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -310,6 +312,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/lodash-npm-4.17.21-6382451519-eb835a2e51.zip/node_modules/lodash/",\
           "packageDependencies": [\
             ["lodash", "npm:4.17.21"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["prettier", [\
+        ["npm:2.6.2", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.6.2-05918420da-48d08dde8e.zip/node_modules/prettier/",\
+          "packageDependencies": [\
+            ["prettier", "npm:2.6.2"]\
           ],\
           "linkType": "HARD"\
         }]\

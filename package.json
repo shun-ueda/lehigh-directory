@@ -11,10 +11,12 @@
   "devDependencies": {
     "@types/node": "^16.9.6",
     "esbuild": "^0.14.31",
-    "esbuild-runner": "^2.2.1"
+    "esbuild-runner": "^2.2.1",
+    "prettier": "^2.6.2"
   },
   "scripts": {
-    "start": "esr hello-world.ts"
+    "start": "esr src/index.ts",
+    "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx)\" --write"
   },
   "packageManager": "yarn@3.2.0"
 }
